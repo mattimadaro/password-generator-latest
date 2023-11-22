@@ -1,0 +1,28 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="container">
+                <h1>Generate a <br><span class="green-text">random password</span></h1>
+                <p class="desc-text">Never use an insecure password again.</p>
+                <button id="pw-btn" onclick="generatePasswords()">Generate passwords</button>
+                <div id="pw-slider">
+                        <input type="range" id="pw-length-el" name="pw-length-el" min="4" max="16" step="1" oninput="rangeValue.value = value"> 
+                        <output id="rangeValue">10</output>
+                        <label for="pw-length-el">Password Length</label>
+                </div>
+                <div class="bottom-page">
+                    <hr>
+                    <div id="pw-field-set">
+                        <div class="pw-field green-text" id="pw-el-one" onclick="copyPwOne()"></div>
+                        <div class="pw-field green-text" id="pw-el-two" onclick="copyPwTwo()"></div>
+                    </div>
+                    <p id="hint">Click the password to copy to clipboard</p>
+                </div>
+            </div>  
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
